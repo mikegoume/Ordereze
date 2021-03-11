@@ -80,7 +80,7 @@ export default function ShowSinglePage(props) {
       </div>
       {showOptions && (
         <div id="modalContainer">
-          <div id="modalChoice1">
+          <div id="modalChoice1" onClick={() => history.push(`/editPage/${pageId}`)}>
             <AiOutlineEdit size={20} />
             <p id="modalChoiceText"> Edit page</p>
           </div>

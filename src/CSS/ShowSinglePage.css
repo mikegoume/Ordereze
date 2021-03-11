@@ -1,15 +1,16 @@
 #SPpageContainer {
     width: 40%;
-    height: 540px;
+    height: 510px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-self: center;
     align-self: center;
     border-radius: 20px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
     margin-top: auto;
     margin-bottom: auto;
+    justify-content: space-between;
 }
 
 #SPoptionsLine {
@@ -32,19 +33,17 @@
     height: 70%;
     margin-left: auto;
     margin-right: auto;
-    justify-self: flex-end;
 }
 
 #SPpageTitle {
-    font-size: x-large;
-    font-weight: 700;
-    margin-top: 5%;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 0%;
 }
 
 #SPpageDescription {
     font-size: large;
-    font-weight: 600;
-    margin-top: 1%;
+    font-weight: bold;
 }
 
 #SPcircleActive {
@@ -63,16 +62,14 @@
 }
 
 #SPpageType {
-    margin-top: 0%;
-    margin-bottom: 10%;
-    font-weight: 700;
-    align-self: center;
     font-size: xx-large;
-
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-weight: 500;
 }
 
 #SPpageDate {
-    align-self: flex-start;
+    align-self: flex-end;
 }
 
 #modalContainer {

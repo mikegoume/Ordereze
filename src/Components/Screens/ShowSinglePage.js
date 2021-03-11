@@ -4,7 +4,7 @@ import "../../CSS/ShowSinglePage.css";
 import { AiOutlineEdit, AiOutlineDelete } from "react-icons/ai";
 import { useHistory } from "react-router-dom";
 
-export default function ShowSinglePage() {
+export default function ShowSinglePage(props) {
   const [pageId, setPageId] = useState(undefined);
   const [page, setPage] = useState(undefined);
   const [showOptions, setShowOptions] = useState(false);
@@ -19,12 +19,16 @@ export default function ShowSinglePage() {
   }
 
   useEffect(() => {
+    console.log(pageId);
     try {
       fetch(
         `https://pagesmanagement.azurewebsites.net/api/ResponsivePages/${pageId}`
       )
         .then((response) => response.json())
         .then((responseJson) => {
+          console.log(responseJson);
+          const dates = responseJson.publishedOn.split("T");
+          responseJson.publishedOn = dates[0] + " " + dates[1];
           setPage(responseJson);
         });
     } catch (error) {
@@ -37,6 +41,7 @@ export default function ShowSinglePage() {
   }
 
   function deletePage(id) {
+    console.log("i deleted");
     const requestOptions = {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
@@ -75,10 +80,7 @@ export default function ShowSinglePage() {
       </div>
       {showOptions && (
         <div id="modalContainer">
-          <div
-            id="modalChoice1"
-            onClick={() => history.push(`/editPage/${pageId}`)}
-          >
+          <div id="modalChoice1">
             <AiOutlineEdit size={20} />
             <p id="modalChoiceText"> Edit page</p>
           </div>
@@ -89,11 +91,10 @@ export default function ShowSinglePage() {
         </div>
       )}
       <div id="SPpageInnerContainer">
-        <p id="SPpageDescription">{page.description}</p>
-        <p id="SPpageDescription">{page.id}</p>
-        <p id="SPpageDescription">{page.publishedOn}</p>
         <p id="SPpageTitle">{page.title}</p>
+        <p id="SPpageDescription">{page.description}</p>
         <p id="SPpageType">{typeOptions[page.type]}</p>
+        <p id="SPpageDate">{page.publishedOn}</p>
       </div>
     </div>
   ) : null;

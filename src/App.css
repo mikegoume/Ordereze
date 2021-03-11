@@ -1,7 +1,8 @@
 .App {
-  text-align: center;
+  background: rgb(0,13,108);
+background: linear-gradient(90deg, rgba(0,13,108,0.7) 0%, rgba(34,54,162,0.7) 58%, rgba(0,118,175,0.7) 100%);
 }
-
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +36,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

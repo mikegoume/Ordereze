@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import ShowAllPages from "./Components/Screens/ShowAllPages";
+import CreatePage from "./Components/Screens/CreatePage";
+import ShowSinglePage from "./Components/Screens/ShowSinglePage";
+import { BrowserRouter, Route } from 'react-router-dom';
+import EditPage from "./Components/Screens/EditPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div 
+        style={{
+          width: '100%',
+          maxWidth: '1440px',
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '100vh',
+          
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          
+        }}
+        className="App"
+      >
+        <BrowserRouter>
+          <Route exact path='/' component={ShowAllPages} />
+          <Route path='/newPage' component={CreatePage} />
+          <Route path='/singlePage/:id' component={ShowSinglePage} />
+          <Route path='/editPage/:id' component={EditPage} />
+        </BrowserRouter>
+      </div>
   );
 }
 

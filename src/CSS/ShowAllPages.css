@@ -1,0 +1,133 @@
+button {
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
+  justify-content: space-around;
+  font-size: medium;
+  border-radius: 5px;
+  border: none;
+}
+
+.SAPmainContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 10%;
+}
+
+.pagesContainer {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.pagesInnerContainer {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-column-gap: 3%;
+  grid-row-gap: 5%;
+}
+
+.pageContainer {
+  border-radius: 7px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.deleteButton {
+  background-color: red;
+  color: rgb(255, 255, 255);
+}
+
+.pageLine {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pageAttribute {
+  font-weight: bold;
+}
+
+.choicesContainer {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.choicesTitle {
+  font-size: x-large;
+  font-weight: bold;
+  margin-left: 10%;
+  width: 90%;
+  color: white;
+}
+
+.choicesOptionContainer {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding-bottom: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.choicesOptionTitle {
+  font-size: larger;
+  font-weight: 600;
+  margin-left: 10%;
+  width: 100%;
+}
+
+.optionLine {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.optionText {
+  margin-left: 5%;
+  font-size: medium;
+}
+
+.optionNo {
+  font-size: medium;
+  margin-left: 2%;
+  color: black;
+}
+
+.pagesTitle {
+  width: 100%;
+  font-size: x-large;
+  font-weight: bold;
+  align-self: flex-start;
+  color: white;
+}
+
+#SAPinput {
+  width: 20px;
+  height: 20px;
+}
+
+.addNewPageContainer {
+  width: 100%;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.newPageTitle {
+  font-size: large;
+  font-weight: 600;
+  position: relative;
+  top: 10%;
+}
